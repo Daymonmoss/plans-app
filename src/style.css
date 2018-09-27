@@ -1,0 +1,55 @@
+body {
+    background: #fbfbfb;
+}
+
+svg.materialIcon {
+    cursor: pointer;
+}
+
+svg.materialIcon path:nth-child(1) {
+
+}
+
+svg.materialIcon:hover path:nth-child(2) {
+    fill: green;
+}
+
+.NavBar__element {
+}
+
+.NavBarElement {
+    filter: grayscale(1);
+    transition:all 0.16s ease-in-out;
+}
+
+.NavBarElement__image{
+    width:64px;
+    height:64px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.NavBarElement__label{
+    display:flex;
+    padding:15px;
+    text-transform: uppercase;
+    text-decoration:none;
+    transform:scale(0.8);
+}
+
+.NavBarElement_active {
+    transform:scale(1.3);
+    filter: none;
+}
+
+
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.border-ok{
+    border-color:#d5d9dc;
+}
+
