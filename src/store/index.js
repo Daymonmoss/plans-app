@@ -1,4 +1,4 @@
-import {observable, autorun, toJS, action, set} from "mobx";
+import {observable, autorun, toJS, computed, action, set} from "mobx";
 import defaultState from './defaultState';
 import {AppConfig} from "../config";
 
@@ -29,8 +29,5 @@ if(AppConfig.spoolStore){
 		localStorage.setItem(AppConfig.localStorageKey, JSON.stringify(toJS(AppStore.formData)));
 	})
 }
-
-
-
 
 export {AppStore};

@@ -16,9 +16,13 @@ export class NavBar extends React.Component {
 					<div className="NavBar">
 						{routes.map((route, key) => (
 							<NavLink exact className={"NavBar__element NavBarElement"}
-									 activeClassName={'NavBarElement_active'} to={route.path} key={key}>
-								<img src={route.icon} className={"NavBarElement__image"} alt={""}/>
-								{/*<div className="NavBarElement__label">{route.label}</div>*/}
+									 activeClassName={'NavBarElement_active'}
+									 to={route.path}
+									 key={key}
+
+							>
+							<img src={route.icon} className={"NavBarElement__image"} alt={""}/>
+							{/*<div className="NavBarElement__label">{route.label}</div>*/}
 							</NavLink>
 						))}
 					</div>
