@@ -1,3 +1,4 @@
 import React from 'react';
+import {FinalSubmission} from "./FinalSubmission";
 
-export const Result = () => <h2>Not found, sorry!</h2>
+export const Result = () => <FinalSubmission/>

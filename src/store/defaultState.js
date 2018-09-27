@@ -47,8 +47,7 @@
  */
 
 export default {
-	customerName: '',
-	customerEmail: '',
+
 	occupants: {
 		children: 0,
 		adults: 1,

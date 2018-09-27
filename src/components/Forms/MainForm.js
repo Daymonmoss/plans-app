@@ -14,29 +14,8 @@ class MainForm extends React.Component {
 
 	render() {
 		return (
-			<div>
-			<form>
-
-				<div className="form-group">
-					<h3 className={"mb-3"}>Основная информация</h3>
-					<Input
-						type="text"
-						label={"Ваше имя"}
-						placeholder={"Ваше имя"}
-						required
-						{...linkedControl(this.store, 'customerName')}
-					/>
-					<Input
-						type="email"
-						label={"Ваша электронная почта"}
-						placeholder={"example@mail.com"}
-						required
-						{...linkedControl(this.store, 'customerEmail')}
-					/>
-				</div>
-			</form>
-			<RoomsForm store={this.store}/>
-			</div>)
+				<RoomsForm store={this.store}/>
+			)
 	}
 }
 
