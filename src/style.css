@@ -41,6 +41,7 @@ svg.materialIcon:hover path:nth-child(2) {
     text-transform: uppercase;
     text-decoration: none;
     transform:scale(0.8);
+    word-break: break-all;
 }
 
 .NavBarElement_active {

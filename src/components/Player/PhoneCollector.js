@@ -26,7 +26,7 @@ export class PhoneCollector extends React.Component{
 				{!this.state.sent && (
 					<form action="" onSubmit={this.onFormSubmit}>
 						<Input placeholder={"+7 ___ ___-__-__"} onInput={this.onInput} value={this.state.phone} required/>
-						<button className={"btn btn-primary"}>Отправить</button>
+						<button className={"btn btn-warning text-white"}>Хорошо, жду звонка</button>
 					</form>
 				)}
 
