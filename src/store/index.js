@@ -1,12 +1,15 @@
 import {observable, autorun, toJS, computed, action, set} from "mobx";
 import defaultState from './defaultState';
 import {AppConfig} from "../config";
+import {getPlan} from "../foundation/api";
 
 
 class Store {
+	@observable requestsPending = 0;
 	@observable formData;
 	@observable customerName = '';
 	@observable customerEmai = '';
+	@observable results = [];
 
 	@action restore() {
 		let state = localStorage.getItem(AppConfig.localStorageKey);
@@ -20,6 +23,12 @@ class Store {
 	constructor(props) {
 		this.toDefaultState();
 		if(AppConfig.spoolStore) this.restore();
+	}
+
+	@action getResults(){
+		getPlan(this.formData).then( result => {
+
+		})
 	}
 
 }

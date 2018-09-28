@@ -22,6 +22,7 @@ svg.materialIcon:hover path:nth-child(2) {
 }
 
 .NavBar__element {
+    flex:1;
 }
 
 .NavBarElement {
@@ -36,12 +37,13 @@ svg.materialIcon:hover path:nth-child(2) {
     -webkit-user-drag: none;
 }
 .NavBarElement__label{
-    display:flex;
+
     padding:15px;
+    text-align:center;
     text-transform: uppercase;
     text-decoration: none;
     transform:scale(0.8);
-    word-break: break-all;
+    word-wrap:break-word;
 }
 
 .NavBarElement_active {
