@@ -5,6 +5,8 @@ import {AppConfig} from "../config";
 
 class Store {
 	@observable formData;
+	@observable customerName = '';
+	@observable customerEmai = '';
 
 	@action restore() {
 		let state = localStorage.getItem(AppConfig.localStorageKey);
