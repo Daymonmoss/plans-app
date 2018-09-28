@@ -15,8 +15,8 @@ export class BottomNavBar extends React.Component {
 				<div className={"row  my-5"}>
 					<div className="col-12">
 						<hr/></div>
-					<div className="col-12 text-right mb-3">
-						<button className={"btn btn-primary"} onClick={this.onForward.bind(this)}>Следующий шаг {(!!this.getNextRoute() ? `(${this.getNextRoute().label})` : ``)}</button>
+					<div className="col-12 text-center mb-3">
+						<button className={"btn btn-success col-sm-3 font-weight-bold"} onClick={this.onForward.bind(this)}>Далее</button>
 					</div>
 				</div>
 

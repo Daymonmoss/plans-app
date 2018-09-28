@@ -12,7 +12,7 @@ export class Input extends ControlComponent {
 	render() {
 		let {label, help, ...rest} = this.props;
 		return (
-			<div className="form-group">
+			<div className="form-group font-weight-bold">
 				{!!label && <label htmlFor={"input_" + this.id}>{label}</label>}
 				<input
 					id={"input_" + this.id}

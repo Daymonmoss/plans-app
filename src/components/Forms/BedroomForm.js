@@ -15,7 +15,7 @@ class BedroomForm extends React.Component {
 			<form>
 				<div className="form-row form-group">
 					<div className="col-12">
-						<h3 className={"mb-3"}>Предметы спальни</h3>
+						<h5 className={"mb-3"}>Предметы спальни:</h5>
 					</div>
 					<div className="col-6">
 

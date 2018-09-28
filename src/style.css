@@ -1,5 +1,8 @@
 body {
-    background: #fbfbfb;
+    background: #f6f6f6; 
+	max-width:1200px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 svg.materialIcon {
@@ -10,8 +13,12 @@ svg.materialIcon path:nth-child(1) {
 
 }
 
+svg.materialIcon path:nth-child(2) {
+    fill: grey;
+}
+
 svg.materialIcon:hover path:nth-child(2) {
-    fill: green;
+    fill: #218838;
 }
 
 .NavBar__element {
@@ -32,24 +39,29 @@ svg.materialIcon:hover path:nth-child(2) {
     display:flex;
     padding:15px;
     text-transform: uppercase;
-    text-decoration:none;
+    text-decoration: none;
     transform:scale(0.8);
 }
 
 .NavBarElement_active {
     transform:scale(1.3);
+    text-decoration: none;
+    color: #f24b07;
     filter: none;
 }
 
-
+.NavBarElement_active:hover {
+    text-decoration: none;
+    color: #f24b07;
+}
 
 .NavBar {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .border-ok{
     border-color:#d5d9dc;
 }
-

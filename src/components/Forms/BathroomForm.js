@@ -18,7 +18,7 @@ class BathroomForm extends React.Component {
 			<form>
 				<div className="form-row form-group">
 						<div className="col-12">
-							<h3 className={"mb-3"}>Предметы санузла</h3>
+							<h5 className={"mb-3"}>Предметы санузла:</h5>
 						</div>
 					<div className="col-6">
 						<Checkbox
@@ -33,6 +33,7 @@ class BathroomForm extends React.Component {
 						<Checkbox
 							label={"Унитаз"}
 							{...linkedControl(this.store, 'toilet', true)}
+							disabled
 						/>
 						<Checkbox
 							label={"Биде"}

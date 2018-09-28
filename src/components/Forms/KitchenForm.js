@@ -17,7 +17,7 @@ class KitchenForm extends React.Component {
 			<form>
 				<div className="form-row form-group">
 					<div className="col-12">
-						<h3 className={"mb-3"}>Предметы кухни</h3>
+						<h5 className={"mb-3"}>Предметы кухни:</h5>
 					</div>
 					<div className="col-6">
 
@@ -30,15 +30,16 @@ class KitchenForm extends React.Component {
 								disabled={!this.store.cookingSurface}
 								linkObject={this.store}
 								options={[
-									{linkKey: 'twoBurnersSurface', label: 'Две комфорки'},
-									{linkKey: 'fourBurnersSurface', label: 'Четыре комфорки'}
+									{linkKey: 'fourBurnersSurface', label: 'Четыре комфорки'},
+									{linkKey: 'twoBurnersSurface', label: 'Две комфорки'}
+									
 								]}
 							/>
 						</div>
 						<Checkbox
 							label={"Холодильник"}
 							{...linkedControl(this.store, 'refrigerator', true)}
-
+                            disabled
 						/>
 						<Checkbox
 							label={"Духовой шкаф"}

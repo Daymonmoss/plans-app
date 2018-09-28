@@ -17,18 +17,18 @@ class MainForm extends React.Component {
 			<div>
 			<form>
 
-				<div className="form-group">
-					<h3 className={"mb-3"}>Основная информация</h3>
+				<div className="form-group col-sm-6">
+					{/*<h3 className={"mb-3"}>Основная информация</h3>*/}
 					<Input
 						type="text"
 						label={"Ваше имя"}
-						placeholder={"Ваше имя"}
+						placeholder={"Иванов Иван Иванович"}
 						required
 						{...linkedControl(this.store, 'customerName')}
 					/>
 					<Input
 						type="email"
-						label={"Ваша электронная почта"}
+						label={"Электронная почта"}
 						placeholder={"example@mail.com"}
 						required
 						{...linkedControl(this.store, 'customerEmail')}

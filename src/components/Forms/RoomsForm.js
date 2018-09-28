@@ -11,10 +11,12 @@ export class RoomsForm extends React.Component{
 	}
 	render(){
 		return(<form>
-			<div className="form-row form-group">
-				<div className="col-6">
-					<label>Количество взрослых</label>
-					<select className={"form-control"}{...linkedControl(this.store.occupants, 'adults')}>
+			<div className="form-group col-sm-6">
+			<label className={"font-weight-bold"}>Количество проживающих:</label>
+				<div className="row">
+					<div className="row mx-1">
+					<label className={"col my-auto"}>Взрослые</label>
+					<select className={"form-control col"}{...linkedControl(this.store.occupants, 'adults')}>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -23,10 +25,11 @@ export class RoomsForm extends React.Component{
 						<option value="6">6</option>
 					</select>
 				</div>
-				<div className="col-6">
-					<label htmlFor="">Количество детей</label>
-					<select className={"form-control"} {...linkedControl(this.store.occupants, 'children')}>
-						<option value="0">Без детей</option>
+				<div className="row mx-1">
+					<label className={"col my-auto"}>Дети</label>
+					<select className={"form-control col"}{...linkedControl(this.store.occupants, 'children')}>
+						<option value="0">0</option>
+						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>
@@ -34,13 +37,17 @@ export class RoomsForm extends React.Component{
 						<option value="6">6</option>
 					</select>
 				</div>
+				</div>
 			</div>
+			
 			{/* CHECKBOXES */}
-			<div className="form-row form-group mt-5">
+		
+			<div className="col-sm-6">
 
-				<h3 className={"mb-3"}>Комнаты, которые необходимо разместить</h3>
-
-				<div className="col-6">
+				<label className={"font-weight-bold"}>Помещения, которые необходимо разместить</label>
+			
+				<div className="row">
+					  <div className="col">
 					<Checkbox
 						label={"Прихожая"}
 						{...linkedControl(this.store.rooms, 'lobby', true)}
@@ -65,7 +72,7 @@ export class RoomsForm extends React.Component{
 						{...linkedControl(this.store.rooms, 'livingRoom', true)}
 					/>
 				</div>
-				<div className="col-6">
+				<div className="col">
 					<Checkbox
 						label={"Спальня"}
 						{...linkedControl(this.store.rooms, 'bedroom', true)}
@@ -88,6 +95,7 @@ export class RoomsForm extends React.Component{
 					/>
 				</div>
 			</div>
+		 </div>
 		</form>)
 	}
 }

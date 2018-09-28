@@ -83,7 +83,7 @@ export default {
 		cookingSurface: true,
 		fourBurnersSurface: false,
 		twoBurnersSurface: true,
-		refrigerator: false,
+		refrigerator: true,
 		owen: true,
 		microwave: false,
 		roundTable: true,

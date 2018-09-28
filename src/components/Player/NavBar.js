@@ -22,7 +22,7 @@ export class NavBar extends React.Component {
 
 							>
 							<img src={route.icon} className={"NavBarElement__image"} alt={""}/>
-							{/*<div className="NavBarElement__label">{route.label}</div>*/}
+							<div className="NavBarElement__label">{route.label}</div>
 							</NavLink>
 						))}
 					</div>

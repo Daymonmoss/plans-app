@@ -16,12 +16,12 @@ import ResultIcon from './assets/freepik-icons/012-photo-camera.svg'
 
 
 export const routes = [
-	{path: '/', component: MainForm, label: 'Старт', icon: StartIcon},
+	{path: '/', component: MainForm, label: 'Основная информация', icon: StartIcon},
 	{path: '/lobby', component: LobbyForm, label: 'Прихожая', icon: LobbyIcon},
 	{path: '/bathroom', component: BathroomForm, label: 'Санузел', icon: BathroomIcon},
 	{path: '/kitchen', component: KitchenForm, label: 'Кухня', icon: KitchenIcon},
 	{path: '/livingroom', component: LivingRoomForm, label: 'Гостиная', icon: LivingRoomIcon},
 	{path: '/bedroom', component: BedroomForm, label: 'Спальня', icon: BedroomIcon},
-	{path: '/result', component: NotFound, label: 'Ваша планировка', icon: ResultIcon},
+	{path: '/result', component: NotFound, label: 'Подходящие планировки', icon: ResultIcon},
 	
 ];
