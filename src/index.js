@@ -3,7 +3,7 @@ import "./style.css";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import {Player} from "./components/Player/Player";
+import {Shell} from "./components/Shell/Shell";
 import {Editor} from "./components/Editor/Editor";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
@@ -12,7 +12,7 @@ const Root = () => {
 		<BrowserRouter>
 			<Switch>
 				<Route path={'/editor'} component={Editor}/>
-				<Route path={'/'} component={Player}/>
+				<Route path={'/'} component={Shell}/>
 			</Switch>
 		</BrowserRouter>
 		)

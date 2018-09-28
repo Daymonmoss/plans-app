@@ -1,6 +1,6 @@
 import React from 'react';
 import {EditorStore} from "../../store/editor";
-import {FileSelect} from "../Player/FileSelect";
+import {FileSelect} from "../Shell/FileSelect";
 import {observer, Provider} from "mobx-react";
 import {RoomsForm} from "../Forms/RoomsForm";
 import {BathroomForm} from "../Forms/BathroomForm";

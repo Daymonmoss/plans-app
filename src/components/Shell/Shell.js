@@ -9,14 +9,14 @@ import {AppStore} from "../../store";
 import {PhoneCollector} from "./PhoneCollector";
 import {Provider} from "mobx-react";
 
-export class Player extends React.Component {
+export class Shell extends React.Component {
 	render() {
 		return (
 			<Provider AppStore={AppStore}>
 				<div className="container">
 					<div className="row">
 						<div className="col-12">
-
+							[DEBUG] Запросов к серверу в очереди:  {AppStore.requestsPending}
 							<NavBar/>
 							<Switch>
 								{routes.map(({path, component}, key) => {
