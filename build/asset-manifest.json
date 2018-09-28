@@ -1,0 +1,13 @@
+{
+  "main.css": "static/css/main.css",
+  "main.css.map": "static/css/main.css.map",
+  "main.js": "static/js/main.js",
+  "main.js.map": "static/js/main.js.map",
+  "static\\media\\001-bed.svg": "static/media/001-bed.c94c86ea.svg",
+  "static\\media\\004-bathtub.svg": "static/media/004-bathtub.67bfe9cc.svg",
+  "static\\media\\006-sofa.svg": "static/media/006-sofa.714e7874.svg",
+  "static\\media\\008-room-key.svg": "static/media/008-room-key.1fcdb409.svg",
+  "static\\media\\009-cutlery.svg": "static/media/009-cutlery.8c055f68.svg",
+  "static\\media\\011-notes.svg": "static/media/011-notes.ed761826.svg",
+  "static\\media\\012-photo-camera.svg": "static/media/012-photo-camera.bc9178b9.svg"
+}

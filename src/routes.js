@@ -15,7 +15,6 @@ import BedroomIcon from './assets/freepik-icons/001-bed.svg';
 import ResultIcon from './assets/freepik-icons/012-photo-camera.svg'
 import {Result} from "./components/Player/Result";
 
-
 export const routes = [
 	{path: '/', component: MainForm, label: 'Основная информация', icon: StartIcon},
 	{path: '/lobby', component: LobbyForm, label: 'Прихожая', icon: LobbyIcon},
