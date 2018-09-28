@@ -26,3 +26,16 @@ export const routes = [
 	{path: '/result', component: Result, label: 'Ваша планировка', icon: ResultIcon},
 	
 ];
+
+const routeByPath = (path) => routes.find(route => route.path === path );
+
+const indexByPath = (path) => routes.indexOf( routeByPath(path, routes) );
+
+export const isLastRoute = path => indexByPath(path) === routes.length-1;
+
+export const isFirstRoute = path => indexByPath(path) === 0;
+
+export const getNextRoute = path => !!routes[indexByPath(path) + 1] ? routes[indexByPath(path) + 1] : null;
+
+export const getPrevRoute = path => !!routes[indexByPath(path) - 1] ? routes[indexByPath(path) - 1] : null;
+

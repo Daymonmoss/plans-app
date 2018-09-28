@@ -1,9 +1,8 @@
 import React from 'react';
-import {routes} from "../../routes";
+import {isFirstRoute, routes,getPrevRoute} from "../../routes";
 import {NavLink, withRouter} from 'react-router-dom';
 import BackButton from "../../assets/back.svg";
 import RestartButton from '../../assets/restart.svg';
-
 import {AppStore} from "../../store";
 
 @withRouter
@@ -11,8 +10,8 @@ export class NavBar extends React.Component {
 	render() {
 		return (
 			<div className="row align-items-center my-5">
-				<div className="col-auto"><BackButton size={24} onClick={this.onBackward.bind(this)}/></div>
-				<div className="col text-center">
+				<div className="col-1">{!isFirstRoute(this.props.location.pathname) && <BackButton size={24} onClick={this.onBackward.bind(this)}/>}</div>
+				<div className="col-10 text-center">
 					<div className="NavBar">
 						{routes.map((route, key) => (
 							<NavLink exact className={"NavBar__element NavBarElement"}
@@ -27,7 +26,7 @@ export class NavBar extends React.Component {
 						))}
 					</div>
 				</div>
-				<div className="col-auto">
+				<div className="col-1">
 					<RestartButton size={24} onClick={this.onStartAgain.bind(this)}/>
 				</div>
 				<div className="col-12 mt-3">
@@ -39,10 +38,7 @@ export class NavBar extends React.Component {
 
 
 	onBackward() {
-		let currentObject = routes.find(route => route.path === this.props.location.pathname);
-
-		let prevObjectIndex = routes.indexOf(currentObject) - 1;
-		if (!!routes[prevObjectIndex]) this.props.history.push(routes[prevObjectIndex].path)
+		!!getPrevRoute(this.props.location.pathname) && this.props.history.push(getPrevRoute(this.props.location.pathname).path)
 	}
 
 
