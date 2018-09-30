@@ -1,8 +1,12 @@
 body {
-    background: #f6f6f6; 
-	max-width:1200px;
-	width: 100%;
-	margin: 0 auto;
+    background: #f6f6f6;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 svg.materialIcon {
@@ -68,3 +72,19 @@ svg.materialIcon:hover path:nth-child(2) {
 .border-ok{
     border-color:#d5d9dc;
 }
+
+footer {
+    flex: 1 0 auto;
+    flex-grow: 0;
+    background: #fff;
+}
+
+.form-submit {
+    background: #f6f6f6
+}
+
+.phone-container {
+    display: grid;
+    text-align: center;
+}
+
