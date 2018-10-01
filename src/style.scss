@@ -1,3 +1,7 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins";
+
+
 body {
   background: #f6f6f6;
   width: 100%;
@@ -26,13 +30,20 @@ svg.materialIcon {
 }
 
 .NavBar {
+  @include media-breakpoint-down(md){
+    flex-wrap: wrap;
 
-  flex-wrap: wrap;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   &__element {
+    @include media-breakpoint-down(sm){
+      flex: 0 100%;
+
+    }
     flex: 1;
   }
 }
