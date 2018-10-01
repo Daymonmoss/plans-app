@@ -7,8 +7,7 @@ import {inject} from "mobx-react";
 export class FinalSubmission extends React.Component{
 	render(){
 		return(<form>
-			<div className="form-group">
-				<h3 className={"mb-3"}>Основная информация</h3>
+			<div className="form-group col-sm-6  align-items-center justify-content-center form-container">
 				<Input
 					type="text"
 					label={"Ваше имя"}
@@ -25,6 +24,10 @@ export class FinalSubmission extends React.Component{
 
 				/>
 			</div>
+			
 		</form>)
-	}
+
+}
+
+
 }

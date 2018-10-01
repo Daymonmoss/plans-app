@@ -13,7 +13,7 @@ export class BottomNavBar extends React.Component {
 					<hr/>
 				</div>
 				<div className="col-12 text-center">
-					{!isLastRoute(this.props.location.pathname) &&
+				{!isLastRoute(this.props.location.pathname) &&
 					<button className={"btn btn-success col-sm-3 font-weight-bold"}
 							onClick={this.onForward.bind(this)}>Далее</button>}
 				</div>

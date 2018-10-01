@@ -33,7 +33,7 @@ class LobbyForm extends React.Component {
 			<form>
 				<div className="form-row form-group">
 					<div className="col-12">
-						<h5 className={"mb-3"}>Предметы прихожей:</h5>
+						<h5>Предметы прихожей:</h5>
 						<LinkedRadioGroup
 							linkObject={this.store}
 							options={[

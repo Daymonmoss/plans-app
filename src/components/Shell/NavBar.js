@@ -9,7 +9,7 @@ import {AppStore} from "../../store";
 export class NavBar extends React.Component {
 	render() {
 		return (
-			<div className="row align-items-center my-5">
+			<div className="row align-items-center">
 				<div className="col-1">{!isFirstRoute(this.props.location.pathname) && <BackButton size={24} onClick={this.onBackward.bind(this)}/>}</div>
 				<div className="col-10 text-center">
 					<div className="NavBar">
@@ -29,7 +29,7 @@ export class NavBar extends React.Component {
 				<div className="col-1">
 					<RestartButton size={24} onClick={this.onStartAgain.bind(this)}/>
 				</div>
-				<div className="col-12 mt-3">
+				<div className="col-12">
 					<hr/>
 				</div>
 			</div>

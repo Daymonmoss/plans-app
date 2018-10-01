@@ -40,7 +40,7 @@ svg.materialIcon {
   justify-content: space-around;
 
   &__element {
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(xs){
       flex: 0 100%;
 
     }
@@ -85,18 +85,46 @@ svg.materialIcon {
   border-color: #d5d9dc;
 }
 
-footer {
-  flex: 1 0 auto;
-  flex-grow: 0;
-  background: #fff;
+.btn-warning {
+  background-color: #f24b07;
+  border-color: #d34b07;
+
+  }
+  
+  .btn-warning:hover{
+      background-color: #d34b07;
+      border-color: #d34b07; 
+      } 
+
+
+#phone-form {
+  @include media-breakpoint-down(sm){
+    position: relative;
+  }
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  box-align: center;
+  text-align: center;  
 }
 
-.form-submit {
-  background: #f6f6f6
+#input_id_13{
+  
 }
 
-.phone-container {
-  display: grid;
-  text-align: center;
+form{
+  max-height: 340px;
+  height:100%
 }
+  
+
+
+
+
+
+
+
+
+
+
 

@@ -22,19 +22,26 @@ export class PhoneCollector extends React.Component{
 	render(){
 		return(
 
-			<div className="phone-container col-sm-8 phone-form row-centered d-flex justify-content-center">
+			<div className="phone-container col-sm-12" id="phone-form">
 				{!this.state.sent && (
 					<form action="" onSubmit={this.onFormSubmit}>
+                     
+					
+					  <label>Остались вопросы? Оставьте свой номер телефона и мы с вами свяжемся.</label>
+					  <div className="row">
+					  <div className="col">
 						<Input 
-						label={"Остались вопросы? Оставьте свой номер телефона и мы с вами свяжемся."}
 						placeholder={"+7 ___ ___-__-__"} 
 						onInput={this.onInput} 
 						value={this.state.phone} 
-						required/>
-						<button className={"btn btn-warning font-weight-bold text-white"}>Хорошо, жду звонка</button>
-					</form>
-				)}
+						required/></div>
 
+						<div><button className={"btn btn-warning font-weight-bold text-white"}>Хорошо, жду звонка</button></div>
+						</div> 
+					</form>
+					 
+				)}
+             
 				{this.state.sent && (
 					<div>Заявка отправлена!</div>
 				)}
