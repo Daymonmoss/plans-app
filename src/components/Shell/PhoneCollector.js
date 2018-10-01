@@ -31,7 +31,7 @@ export class PhoneCollector extends React.Component{
 						onInput={this.onInput} 
 						value={this.state.phone} 
 						required/>
-						<button className={"btn btn-warning text-white"}>Хорошо, жду звонка</button>
+						<button className={"btn btn-warning font-weight-bold text-white"}>Хорошо, жду звонка</button>
 					</form>
 				)}
 

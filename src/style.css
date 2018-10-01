@@ -73,14 +73,24 @@ svg.materialIcon:hover path:nth-child(2) {
     border-color:#d5d9dc;
 }
 
+.btn-warning {
+background-color: #f24b07;
+border-color: #d34b07; 
+}
+
+.btn-warning:hover{
+    background-color: #d34b07;
+    border-color: #d34b07; 
+    }
+    
 footer {
     flex: 1 0 auto;
     flex-grow: 0;
-    background: #fff;
+ 
 }
 
 .form-submit {
-    background: #f6f6f6
+    background-color: #f6f6f6
 }
 
 .phone-container {
