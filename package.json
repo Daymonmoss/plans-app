@@ -65,12 +65,13 @@
     "sass-loader": "^7.1.0"
   },
   "scripts": {
-    "start-dev": "node scripts/start.js",
+    "dev-start": "node scripts/start.js",
     "start": "npm run build && npm run server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "server": "nodemon serverside/index.js",
-    "heroku-deploy": "git add . && git commit -m \"Deploy Commit\" && git push heroku master"
+    "dev-server": "nodemon serverside/index.js",
+    "server": "serverside/index.js"
+
   },
   "jest": {
     "collectCoverageFrom": [
