@@ -31,7 +31,7 @@ export class PlanView extends React.Component {
 					<li className="list-group-item">
 						<h4>Позиций не совпало: </h4>
 						<ExplainedView elements={searchResult.notMatched}/>
-						
+
 					</li>
 
 				</ul>
