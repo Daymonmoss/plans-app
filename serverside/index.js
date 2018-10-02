@@ -15,11 +15,11 @@ app.post('/api/getPlan', FindPlans);
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
-	res.sendFile(path.join(__dirname+'/index.html'));
+	res.sendFile(path.join(__dirname+'./../build/index.html'));
 });
 
 app.listen(80, function () {
-	console.log('CORS-ready server is running on port 80!');
+	console.log('CORS-ready server is running on localhost:80!');
 });
 
 

@@ -69,8 +69,8 @@
     "start": "npm run build && npm run server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "dev-server": "nodemon serverside/index.js",
-    "server": "serverside/index.js"
+    "server": "nodemon serverside/index.js"
+
 
   },
   "jest": {
