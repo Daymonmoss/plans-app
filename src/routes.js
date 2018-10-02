@@ -4,7 +4,6 @@ import {BathroomForm} from "./components/Forms/BathroomForm";
 import {KitchenForm} from "./components/Forms/KitchenForm";
 import {LivingRoomForm} from "./components/Forms/LivingRoomForm";
 import {BedroomForm} from "./components/Forms/BedroomForm";
-import {NotFound} from "./components/Shell/NotFound";
 
 import StartIcon from './assets/freepik-icons/011-notes.svg';
 import LobbyIcon from './assets/freepik-icons/008-room-key.svg';
@@ -23,7 +22,6 @@ export const routes = [
 	{path: '/livingroom', component: LivingRoomForm, label: 'Гостиная', icon: LivingRoomIcon},
 	{path: '/bedroom', component: BedroomForm, label: 'Спальня', icon: BedroomIcon},
 	{path: '/result', component: Result, label: 'Ваша планировка', icon: ResultIcon},
-	
 ];
 
 const routeByPath = (path) => routes.find(route => route.path === path );

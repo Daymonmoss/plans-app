@@ -18,13 +18,13 @@ export class FileSelect extends React.Component {
 					<input type="file" className="form-control-file" id="fileselect"
 						   onChange={this.onFileChange.bind(this)}/>
 					</div>
-					{!!this.props.EditorStore.image && <img src={this.props.EditorStore.image} className="img-fluid rounded"/>}
+					{!!this.props.EditorStore.image && <img src={this.props.EditorStore.image} alt="" className="img-fluid rounded"/>}
 			</div>)
 	}
 
 	onFileChange(event) {
 
-		let base64 = getBase64(event.target.files[0]).then(result => this.props.onChange(result));
+		getBase64(event.target.files[0]).then(result => this.props.onChange(result));
 
 	}
 

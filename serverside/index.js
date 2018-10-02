@@ -1,18 +1,20 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
+
+
 const app = express();
-
+app.use(cors())
+app.use(express.json());
 app.use(express.static(path.join(__dirname, '../build')));
+app.options('*', cors())
 
-app.post('/api/sendmail', function (req, res) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.status(200).send("I got ya!");
 
-});
-
+const FindPlans = require('./src/controllers/FindPlans');
+app.post('/api/getPlan', FindPlans);
 
 app.listen(80, function () {
-	console.log('Server is up on port 80!');
+	console.log('CORS-ready server is running on port 80!');
 });
 
 

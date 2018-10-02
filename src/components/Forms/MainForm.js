@@ -1,7 +1,5 @@
 import React from 'react';
-import {inject, observer} from "mobx-react";
-import {linkedControl} from "../../foundation/utils";
-import {Checkbox, Input} from "../FormControls";
+import {observer} from "mobx-react";
 import {RoomsForm} from "./RoomsForm";
 
 

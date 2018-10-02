@@ -1,6 +1,6 @@
-import {observable, autorun, toJS, action, set} from "mobx";
+import {observable, action} from "mobx";
 import defaultState from './defaultState';
-import {AppConfig} from "../config";
+
 
 
 class Store {
