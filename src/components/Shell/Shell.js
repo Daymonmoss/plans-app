@@ -16,11 +16,12 @@ export class Shell extends React.Component {
 				<div className="container">
 					<div className="row">
 						<div className="col-12">
-						<header>
-						    <h2 className="h25, text-center">Информация о Вашей будущей квартире</h2>
-							<p className="h25, text-center">Почти все поля необязательны для заполнения, но благодаря этим данным мы создадим максимально подходящие для Вас планировки.</p>
-						</header>
-							[DEBUG] Запросов к серверу в очереди:  {AppStore.requestsPending}
+							<header>
+								<h2 className="h25, text-center">Информация о Вашей будущей квартире</h2>
+								<p className="h25, text-center">Почти все поля необязательны для заполнения, но
+									благодаря этим данным мы создадим максимально подходящие для Вас планировки.</p>
+							</header>
+							[DEBUG] Запросов к серверу в очереди: {AppStore.requestsPending}
 							<NavBar/>
 							<Switch>
 								{routes.map(({path, component}, key) => {
@@ -33,8 +34,8 @@ export class Shell extends React.Component {
 								<Route exact component={NotFound}/>
 							</Switch>
 							<footer>
-							<BottomNavBar/>
-							<PhoneCollector/>
+								<BottomNavBar/>
+								<PhoneCollector/>
 							</footer>
 						</div>
 					</div>

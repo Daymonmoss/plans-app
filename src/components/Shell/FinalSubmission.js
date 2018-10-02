@@ -4,9 +4,9 @@ import {linkedControl} from "../../foundation/utils";
 import {inject} from "mobx-react";
 
 @inject('AppStore')
-export class FinalSubmission extends React.Component{
-	render(){
-		return(<form>
+export class FinalSubmission extends React.Component {
+	render() {
+		return (<form>
 			<div className="form-group col-sm-6  align-items-center justify-content-center form-container">
 				<Input
 					type="text"
@@ -24,10 +24,10 @@ export class FinalSubmission extends React.Component{
 
 				/>
 			</div>
-			
+
 		</form>)
 
-}
+	}
 
 
 }

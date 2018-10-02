@@ -4,8 +4,6 @@ import {linkedControl} from "../../foundation/utils";
 import {Checkbox} from "../FormControls";
 
 
-
-
 @observer
 class BathroomForm extends React.Component {
 	constructor(props) {
@@ -17,9 +15,9 @@ class BathroomForm extends React.Component {
 		return (
 			<form>
 				<div className="form-row form-group">
-						<div className="col-12">
-							<h5>Предметы санузла:</h5>
-						</div>
+					<div className="col-12">
+						<h5>Предметы санузла:</h5>
+					</div>
 					<div className="col-6">
 						<Checkbox
 							label={"Ванна"}
@@ -53,8 +51,6 @@ class BathroomForm extends React.Component {
 							{...linkedControl(this.store, 'case', true)}
 						/>
 					</div>
-
-
 
 
 				</div>

@@ -4,7 +4,6 @@ import {linkedControl} from "../../foundation/utils";
 import {Checkbox, LinkedRadioGroup} from "../FormControls";
 
 
-
 @observer
 class LivingRoomForm extends React.Component {
 	constructor(props) {
@@ -21,10 +20,10 @@ class LivingRoomForm extends React.Component {
 					</div>
 					<div className="col-6">
 
-							<Checkbox
-								label={"Диван"}
-								{...linkedControl(this.store, 'coach', true)}
-							/>
+						<Checkbox
+							label={"Диван"}
+							{...linkedControl(this.store, 'coach', true)}
+						/>
 						<div className={"ml-3"}>
 							<LinkedRadioGroup
 								disabled={!this.store.coach}

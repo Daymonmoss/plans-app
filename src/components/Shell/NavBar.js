@@ -1,5 +1,5 @@
 import React from 'react';
-import {isFirstRoute, routes,getPrevRoute} from "../../routes";
+import {getPrevRoute, isFirstRoute, routes} from "../../routes";
 import {NavLink, withRouter} from 'react-router-dom';
 import BackButton from "../../assets/back.svg";
 import RestartButton from '../../assets/restart.svg';
@@ -10,7 +10,8 @@ export class NavBar extends React.Component {
 	render() {
 		return (
 			<div className="row align-items-center">
-				<div className="col-1">{!isFirstRoute(this.props.location.pathname) && <BackButton size={24} onClick={this.onBackward.bind(this)}/>}</div>
+				<div className="col-1">{!isFirstRoute(this.props.location.pathname) &&
+				<BackButton size={24} onClick={this.onBackward.bind(this)}/>}</div>
 				<div className="col-10 text-center">
 					<div className="NavBar">
 						{routes.map((route, key) => (
@@ -20,8 +21,8 @@ export class NavBar extends React.Component {
 									 key={key}
 
 							>
-							<img src={route.icon} className={"NavBarElement__image"} alt={""}/>
-							<div className="NavBarElement__label">{route.label}</div>
+								<img src={route.icon} className={"NavBarElement__image"} alt={""}/>
+								<div className="NavBarElement__label">{route.label}</div>
 							</NavLink>
 						))}
 					</div>

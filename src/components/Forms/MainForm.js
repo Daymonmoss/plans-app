@@ -12,8 +12,8 @@ class MainForm extends React.Component {
 
 	render() {
 		return (
-				<RoomsForm store={this.store}/>
-			)
+			<RoomsForm store={this.store}/>
+		)
 	}
 }
 

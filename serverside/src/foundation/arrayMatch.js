@@ -1,4 +1,3 @@
-
 /**
  * Matches two arrays' contents
  * Returns three arrays:
@@ -15,9 +14,9 @@ module.exports = arrayMatch = (left, right) => {
 
 		let rightIndex = restRight.indexOf(element);
 
-		if(rightIndex !== -1){
+		if (rightIndex !== -1) {
 
-			restLeft.splice(leftIndex,1);
+			restLeft.splice(leftIndex, 1);
 			let matchedElement = restRight.splice(rightIndex, 1)[0]
 			match.push(matchedElement)
 		}

@@ -33,10 +33,10 @@ export class Editor extends React.Component {
 							/>
 						</div>
 
-							<FileSelect
-								value={this.store.image}
-								onChange={this.onFileChange.bind(this)}
-							/>
+						<FileSelect
+							value={this.store.image}
+							onChange={this.onFileChange.bind(this)}
+						/>
 
 						<RoomsForm store={this.store.formData}/>
 						<LobbyForm store={this.store}/>
@@ -45,9 +45,11 @@ export class Editor extends React.Component {
 						<LivingRoomForm store={this.store}/>
 						<BedroomForm store={this.store}/>
 						<hr/>
-						<button onClick={this.onJsonSave.bind(this)} className={"btn btn-primary"}>Скачать файл планировки</button>
+						<button onClick={this.onJsonSave.bind(this)} className={"btn btn-primary"}>Скачать файл
+							планировки
+						</button>
 					</div>
-					</div>
+				</div>
 			</Provider>
 		)
 	}
@@ -57,7 +59,7 @@ export class Editor extends React.Component {
 
 	}
 
-	onJsonSave(event){
+	onJsonSave(event) {
 		let blob = new Blob([JSON.stringify(this.store.toJS())], {type: "application/json"});
 		saveAs(blob, "plan.json")
 	}

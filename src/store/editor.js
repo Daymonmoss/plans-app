@@ -1,6 +1,5 @@
-import {observable, action} from "mobx";
+import {action, observable} from "mobx";
 import defaultState from './defaultState';
-
 
 
 class Store {
@@ -8,18 +7,18 @@ class Store {
 	@observable image = null;
 	@observable name = 'Новый план помещения';
 
-	@action toDefaultState(){
-		this.formData = defaultState;
-	}
-
 	constructor(props) {
 		this.toDefaultState();
 	}
 
-	toJS(){
+	@action toDefaultState() {
+		this.formData = defaultState;
+	}
+
+	toJS() {
 		let obj = {
-			planName:this.name,
-			planImage:this.image,
+			planName: this.name,
+			planImage: this.image,
 			...this.formData
 		};
 

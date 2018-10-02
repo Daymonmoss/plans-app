@@ -6,20 +6,23 @@ import {withRouter} from "react-router-dom";
 export class BottomNavBar extends React.Component {
 	render() {
 		return (
-		
-		
-			<div className={"form-submit row"}>
-				<div className="col-12">
-					<hr/>
+			<div>
+				{!isLastRoute(this.props.location.pathname) && <div className={"form-submit row"}>
+					<div className="col-12">
+						<hr/>
+					</div>
+					<div className="col-12 text-center">
+
+						<button className={"btn btn-success col-sm-3 font-weight-bold"}
+								onClick={this.onForward.bind(this)}>Далее
+						</button>
+
+					</div>
+					<div className="col-12">
+						<hr/>
+					</div>
 				</div>
-				<div className="col-12 text-center">
-				{!isLastRoute(this.props.location.pathname) &&
-					<button className={"btn btn-success col-sm-3 font-weight-bold"}
-							onClick={this.onForward.bind(this)}>Далее</button>}
-				</div>
-				<div className="col-12">
-					<hr/>
-				</div>
+				}
 			</div>
 
 		)

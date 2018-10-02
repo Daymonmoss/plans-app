@@ -17,8 +17,9 @@ export class FileSelect extends React.Component {
 					<label htmlFor="fileselect">Изображение планировки</label>
 					<input type="file" className="form-control-file" id="fileselect"
 						   onChange={this.onFileChange.bind(this)}/>
-					</div>
-					{!!this.props.EditorStore.image && <img src={this.props.EditorStore.image} alt="" className="img-fluid rounded"/>}
+				</div>
+				{!!this.props.EditorStore.image &&
+				<img src={this.props.EditorStore.image} alt="" className="img-fluid rounded"/>}
 			</div>)
 	}
 

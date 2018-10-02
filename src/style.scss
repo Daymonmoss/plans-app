@@ -1,7 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/mixins";
 
-
 body {
   background: #f6f6f6;
   width: 100%;
@@ -30,7 +29,7 @@ svg.materialIcon {
 }
 
 .NavBar {
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     flex-wrap: wrap;
 
   }
@@ -40,7 +39,7 @@ svg.materialIcon {
   justify-content: space-around;
 
   &__element {
-    @include media-breakpoint-down(xs){
+    @include media-breakpoint-down(xs) {
       flex: 0 100%;
 
     }
@@ -89,32 +88,26 @@ svg.materialIcon {
   background-color: #f24b07;
   border-color: #d34b07;
 
-  }
-  
-  .btn-warning:hover{
-      background-color: #d34b07;
-      border-color: #d34b07; 
-      } 
+}
 
+.btn-warning:hover {
+  background-color: #d34b07;
+  border-color: #d34b07;
+}
 
 #phone-form {
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     position: relative;
   }
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   align-items: center;
 
-  text-align: center;  
 }
 
-#input_id_13{
-  
-}
-
-form{
+form {
   max-height: 340px;
-  height:100%
+  height: 100%
 }
   
 

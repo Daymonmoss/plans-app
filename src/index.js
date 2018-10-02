@@ -1,4 +1,3 @@
-
 import "./style.scss";
 
 import React from "react";
@@ -8,14 +7,14 @@ import {Editor} from "./components/Editor/Editor";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 const Root = () => {
-	return(
+	return (
 		<BrowserRouter>
 			<Switch>
 				<Route path={'/editor'} component={Editor}/>
 				<Route path={'/'} component={Shell}/>
 			</Switch>
 		</BrowserRouter>
-		)
+	)
 }
 
 ReactDOM.render(<Root/>, document.getElementById("root"));

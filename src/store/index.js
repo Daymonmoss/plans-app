@@ -1,7 +1,6 @@
-import {observable, autorun, toJS, action, set} from "mobx";
+import {action, autorun, observable, set, toJS} from "mobx";
 import defaultState from './defaultState';
 import {AppConfig} from "../config";
-
 
 
 class Store {
@@ -11,28 +10,29 @@ class Store {
 	@observable customerEmai = '';
 	@observable results = [];
 
+	constructor(props) {
+		this.toDefaultState();
+		if (AppConfig.spoolStore) this.restore();
+	}
+
 	@action restore() {
 		let state = localStorage.getItem(AppConfig.localStorageKey);
 		set(this.formData, JSON.parse(state))
 	}
 
-	@action toDefaultState(){
+	@action toDefaultState() {
 		this.formData = defaultState;
 	}
 
-	constructor(props) {
-		this.toDefaultState();
-		if(AppConfig.spoolStore) this.restore();
-	}
-
-	@action async getResults(){
+	@action
+	async getResults() {
 
 		const rawResponse = await fetch(`${AppConfig.apiAddress}getPlan`, {
-			method:'POST',
+			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body:JSON.stringify(this.toJS()),
+			body: JSON.stringify(this.toJS()),
 		});
 
 		const content = await rawResponse.json();
@@ -40,12 +40,9 @@ class Store {
 		this.results = content;
 
 
-
-
-
 	}
 
-	toJS(){
+	toJS() {
 		return toJS(this.formData);
 	}
 
@@ -53,8 +50,8 @@ class Store {
 
 let AppStore = new Store();
 
-if(AppConfig.spoolStore){
-	autorun(()=>{
+if (AppConfig.spoolStore) {
+	autorun(() => {
 		localStorage.setItem(AppConfig.localStorageKey, JSON.stringify(AppStore.toJS()));
 	})
 }
