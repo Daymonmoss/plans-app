@@ -39,15 +39,11 @@ const scoreByOccupants = searchObject => plan => {
 	let searchAdults = +searchObject.occupants.adults;
 	let searchChildren = +searchObject.occupants.children;
 
-
-
 	let adultsScore = 0;
 	let childrenScore = 0;
 
 	let adultsDifference = planAdults - searchAdults;
 	let childrenDifference = planChildren - searchChildren;
-
-
 
 	let topScore = 4;
 
