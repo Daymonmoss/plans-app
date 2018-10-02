@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.js",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
@@ -66,10 +65,12 @@
     "sass-loader": "^7.1.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start-dev": "node scripts/start.js",
+    "start": "npm run build && npm run server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "server": "nodemon serverside/index.js"
+    "server": "nodemon serverside/index.js",
+    "heroku-deploy": "git add . && git commit -m \"Deploy Commit\" && git push heroku master"
   },
   "jest": {
     "collectCoverageFrom": [

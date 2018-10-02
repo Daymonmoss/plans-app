@@ -13,6 +13,11 @@ app.options('*', cors())
 const FindPlans = require('./src/controllers/FindPlans');
 app.post('/api/getPlan', FindPlans);
 
+// Handles any requests that don't match the ones above
+app.get('*', (req,res) =>{
+	res.sendFile(path.join(__dirname+'/index.html'));
+});
+
 app.listen(80, function () {
 	console.log('CORS-ready server is running on port 80!');
 });
