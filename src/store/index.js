@@ -36,8 +36,15 @@ class Store {
 		});
 
 		const content = await rawResponse.json();
+		if(AppConfig.debug){
+			console.clear();
+			console.log(content);
+			this.results = content.splice(0, 3);
+		}else{
+			this.results = content;
+		}
 
-		this.results = content;
+
 
 
 	}

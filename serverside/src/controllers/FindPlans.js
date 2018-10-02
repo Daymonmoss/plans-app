@@ -32,7 +32,8 @@ const findPlans = (req, res) => {
 
 	}).sort((plan, nextPlan) => nextPlan.searchResult.score - plan.searchResult.score);
 
-	const topPick = found.splice(0, 3);
+	//todo:uncomment on production
+	const topPick = found;//.splice(0, 3);
 
 
 	res.status(200).send(JSON.stringify(topPick));
