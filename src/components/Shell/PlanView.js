@@ -16,26 +16,18 @@ export class PlanView extends React.Component {
 	}
 
 	render() {
-		let {plan, searchResult} = this.props.data;
+		let plan = this.props.data;
 		return (<div className="card">
-			<img className="card-img-top" src={plan.planImage} alt={plan.planName}/>
 			<div className="card-body">
-				<h5 className="card-title">{plan.planName} ({searchResult.score} очков)</h5>
+				<h5 className="card-title">{plan.planName}</h5>
 
 				<ul className="list-group list-group-flush">
-					<li className="list-group-item">Очков: <b>{searchResult.score}</b></li>
-					<li className="list-group-item">
-						<h4>Позиций совпало</h4>
-						<ExplainedView elements={searchResult.matched}/>
-					</li>
-					<li className="list-group-item">
-						<h4>Позиций не совпало: </h4>
-						<ExplainedView elements={searchResult.notMatched}/>
 
-					</li>
 
 				</ul>
 			</div>
+			<img className="card-img-bottom img-fluid" src={plan.planImage} alt={plan.planName} />
+
 		</div>)
 	}
 }
