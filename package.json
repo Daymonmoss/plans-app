@@ -66,11 +66,12 @@
   },
   "scripts": {
     "dev-start": "node scripts/start.js",
-    "start": "npm run build && npm run server",
+    "start": "npm run server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "server": "nodemon serverside/index.js",
-    "postinstall": "npm rebuild"
+    "deploy":"npm run build && git add . && git commit -m \"deploy\" && git push heroku master && heroku logs --tail"
+    
   },
   "jest": {
     "collectCoverageFrom": [
