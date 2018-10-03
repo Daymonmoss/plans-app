@@ -71,8 +71,6 @@
     "test": "node scripts/test.js --env=jsdom",
     "server": "nodemon serverside/index.js",
     "postinstall": "npm rebuild"
-
-
   },
   "jest": {
     "collectCoverageFrom": [
