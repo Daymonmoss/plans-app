@@ -1,6 +1,6 @@
 const JsonDB = require('node-json-db');
 const db = new JsonDB("./serverside/data/myDataBase", true, false);
-const matchPlanItems = require('../foundation/matchPlanitems');
+const matchPlanItems = require('../foundation/matchPlanItems');
 
 const scorable = item => ({score:0, ...item});
 const notNull = item => item.score !== 0;
