@@ -18,8 +18,8 @@ app.get('*', (req,res) =>{
 	res.sendFile(path.join(__dirname+'./../build/index.html'));
 });
 
-app.listen(8080, function () {
-	console.log('CORS-ready server is running on localhost:80!');
+app.listen(process.env.PORT || 80, function () {
+	console.log('CORS-ready server is running on localhost:'+process.env.PORT || 80+'!');
 });
 
 
