@@ -1,4 +1,4 @@
-module.exports = matchPlanItems = (left, right) => {
+const matchPlanItems = (left, right) => {
 	let matched = [];
 	let notMatched = []
 
@@ -14,3 +14,5 @@ module.exports = matchPlanItems = (left, right) => {
 
 }
 
+
+module.exports = matchPlanItems

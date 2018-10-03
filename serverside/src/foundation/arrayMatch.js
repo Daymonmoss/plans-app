@@ -5,7 +5,9 @@
  * second, containing elements which exists in leftArray but not found in rightArray,
  * and the third array will contain elements found in rightArray but not found in leftArray;
  */
-module.exports = arrayMatch = (left, right) => {
+
+
+const arrayMatch = (left, right) => {
 	let match = [],
 		restLeft = [...left],
 		restRight = [...right];
@@ -31,3 +33,6 @@ module.exports = arrayMatch = (left, right) => {
 
 }
 
+
+
+module.exports = arrayMatch;

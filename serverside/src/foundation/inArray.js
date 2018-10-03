@@ -1,1 +1,3 @@
-module.exports = inArray = (array, value) => array.indexOf(value) !== -1;
+const inArray = (array, value) => array.indexOf(value) !== -1;
+
+module.exports = inArray
