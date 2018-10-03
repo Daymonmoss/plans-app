@@ -66,7 +66,7 @@
   },
   "scripts": {
     "dev-start": "node scripts/start.js",
-    "start": "npm run build && npm run server",
+    "start": "npm rebuild node-sass && npm run build && npm run server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "server": "nodemon serverside/index.js"
