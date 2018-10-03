@@ -7,7 +7,7 @@ import {SuggestedPlans} from "./SuggestedPlans";
 export class Result extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="row">
 				<SuggestedPlans/>
 				<FinalSubmission/>
 			</div>

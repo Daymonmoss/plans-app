@@ -6,8 +6,8 @@ import {inject} from "mobx-react";
 @inject('AppStore')
 export class FinalSubmission extends React.Component {
 	render() {
-		return (<form>
-			<div className="form-group col-sm-6  align-items-center justify-content-center form-container">
+		return (<form className="col-sm-4">
+			<div className="form-group align-items-center justify-content-center form-container">
 				<Input
 					type="text"
 					label={"Ваше имя"}
