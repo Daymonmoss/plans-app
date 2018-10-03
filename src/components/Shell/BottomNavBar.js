@@ -1,6 +1,7 @@
 import {getNextRoute, isLastRoute} from "../../routes";
 import React from 'react';
 import {withRouter} from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 @withRouter
 export class BottomNavBar extends React.Component {
@@ -12,14 +13,18 @@ export class BottomNavBar extends React.Component {
 						<hr/>
 					</div>
 					<div className="col-12">
-						<div className="row center-block">
-							<div className='col-sm-6'>
-								<button className={"btn btn-primary  font-weight-bold"}
-										onClick={this.onForward.bind(this)}>Посмотреть планировки
-								</button></div>
-							<div className='col-sm-6'>
+						<div className="row">
+							<div className='col-sm-6 text-center'>
+								<Link to={`./result`}>
+										
+								<button className={"btn btn-primary  font-weight-bold"}>Посмотреть планировки</button>
+										
+										
+										</Link>
+								</div>
+							<div className='col-sm-6 text-center'>
 								<button className={"btn btn-success  font-weight-bold"}
-										onClick={this.onForward.bind(this)}>Далее
+										onClick={this.onForward.bind(this)}>Далее -->
 								</button></div>
 
 						</div>
