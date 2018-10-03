@@ -11,17 +11,20 @@ export class BottomNavBar extends React.Component {
 					<div className="col-12">
 						<hr/>
 					</div>
-					<div className="row center-block">
-					<div className='col-sm-auto'>
-					    <button className={"btn btn-primary  font-weight-bold"}
-								onClick={this.onForward.bind(this)}>Посмотреть планировки
-						</button></div>
-						<div className='col-sm-auto'>
-						<button className={"btn btn-success  font-weight-bold"}
-								onClick={this.onForward.bind(this)}>Далее
-						</button></div>
+					<div className="col-12">
+						<div className="row center-block">
+							<div className='col-sm-6'>
+								<button className={"btn btn-primary  font-weight-bold"}
+										onClick={this.onForward.bind(this)}>Посмотреть планировки
+								</button></div>
+							<div className='col-sm-6'>
+								<button className={"btn btn-success  font-weight-bold"}
+										onClick={this.onForward.bind(this)}>Далее
+								</button></div>
 
+						</div>
 					</div>
+
 					<div className="col-12">
 						<hr/>
 					</div>
