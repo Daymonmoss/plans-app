@@ -3,6 +3,10 @@ const path = require('path');
 const cors = require('cors');
 
 
+
+
+
+
 const app = express();
 app.use(cors())
 app.use(express.json());
@@ -17,9 +21,9 @@ app.post('/api/getPlan', FindPlans);
 app.get('*', (req,res) =>{
 	res.sendFile(path.join(__dirname+'./../build/index.html'));
 });
-
-app.listen(process.env.PORT || 80, function () {
-	console.log('CORS-ready server is running on localhost:'+process.env.PORT || 80+'!');
+const port = process.env.PORT || 80
+app.listen(port || 80, function () {
+	console.log('CORS-ready server is running on localhost:'+port+'!');
 });
 
 

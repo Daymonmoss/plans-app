@@ -1,8 +1,11 @@
+const port = process.env.PORT || 80;
+const hostname = process.env.HEROKU_APP_NAME || 'localhost'
+const protocol = !!process.env.HEROKU_APP_NAME ? 'https' : 'http';
 const AppConfig = {
 	spoolStore: true,
 	localStorageKey: 'APP_TEST',
 	debug:true,
-	apiAddress: 'http://localhost:80/api/'
+	apiAddress: `${protocol}://${hostname}:${port}/api/`
 }
 
 export {AppConfig}

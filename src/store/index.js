@@ -26,7 +26,8 @@ class Store {
 
 	@action
 	async getResults() {
-
+		console.clear();
+		console.log(AppConfig.apiAddress);
 		const rawResponse = await fetch(`${AppConfig.apiAddress}getPlan`, {
 			method: 'POST',
 			headers: {
