@@ -11,9 +11,9 @@ export class SuggestedPlans extends React.Component {
 
 	render() {
 		return (
-			<div className={"сol-sm-6"}>
+			<div className={"col"}>
 				{this.props.AppStore.results.map((result, key) => (
-					<div className="row"><PlanView data={result} key={key}/></div>
+					<PlanView data={result} key={key}/>
 				))}
 			</div>
 		)
