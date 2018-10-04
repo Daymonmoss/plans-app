@@ -1,4 +1,4 @@
-'use strict';
+
 
 const autoprefixer = require('autoprefixer');
 const path = require('path');
@@ -227,7 +227,6 @@ module.exports = {
 						exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/,/\.scss$/],
 						loader: require.resolve('file-loader'),
 						options: {
-							publicPath:process.env.REACT_APP_URL+'/',
 							name: 'static/media/[name].[hash:8].[ext]',
 						},
 					},

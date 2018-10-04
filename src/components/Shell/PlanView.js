@@ -17,14 +17,10 @@ export class PlanView extends React.Component {
 
 	render() {
 		let plan = this.props.data;
-		return (<div className="card">
+		return (
+		<div className="card">
 			<div className="card-body">
 				<h5 className="card-title">{plan.planName}</h5>
-
-				<ul className="list-group list-group-flush">
-
-
-				</ul>
 			</div>
 			<img className="card-img-bottom img-fluid" src={plan.planImage} alt={plan.planName} />
 

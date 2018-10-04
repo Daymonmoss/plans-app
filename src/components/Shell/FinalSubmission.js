@@ -6,7 +6,10 @@ import {inject} from "mobx-react";
 @inject('AppStore')
 export class FinalSubmission extends React.Component {
 	render() {
-		return (<form className="col-sm-4">
+		return (
+		<div className="row">
+			<div className="col-4">
+			<form>
 			<div className="form-group align-items-center justify-content-center form-container">
 				<Input
 					type="text"
@@ -25,7 +28,10 @@ export class FinalSubmission extends React.Component {
 				/>
 			</div>
 
-		</form>)
+		</form>
+			</div>
+		</div>
+		)
 
 	}
 
