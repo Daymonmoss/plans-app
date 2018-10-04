@@ -243,7 +243,9 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.scss$/,],
             options: {
+
               name: 'static/media/[name].[hash:8].[ext]',
+              publicPath:process.env.REACT_APP_URL+'/'
             },
           },
           // ** STOP ** Are you adding a new loader?
