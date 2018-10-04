@@ -11,6 +11,7 @@ class Store {
 	@observable customerEmai = '';
 	@observable results = [];
 	@observable plansType = null;
+	@observable loading = false;
 
 	constructor(props) {
 		this.toDefaultState();
@@ -28,7 +29,7 @@ class Store {
 
 	@action
 	async getResults() {
-
+		this.loading = true;
 		const rawResponse = await fetch(`${AppConfig.apiAddress}getPlan`, {
 			method: 'POST',
 			headers: {
@@ -40,8 +41,10 @@ class Store {
 		const content = await rawResponse.json();
 		if(AppConfig.debug){
 			this.results = content.splice(0, 3);
+			this.loading = false;
 		}else{
 			this.results = content;
+			this.loading = false;
 		}
 
 
