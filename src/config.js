@@ -1,6 +1,6 @@
 const port = process.env.PORT || 80;
-const hostname = process.env.HEROKU_APP_NAME || 'localhost'
-const protocol = !!process.env.HEROKU_APP_NAME ? 'https' : 'http';
+const hostname = `${process.env.REACT_APP_HOST}.herokuapp.com` || 'localhost'
+const protocol = !!process.env.REACT_APP_HOST ? 'http' : 'http';
 const AppConfig = {
 	spoolStore: true,
 	localStorageKey: 'APP_TEST',
