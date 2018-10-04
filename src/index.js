@@ -21,4 +21,4 @@ window.planWidget = (el, config) => {
 	ReactDOM.render(<Root plansType={config.plansType}/>, document.querySelector(el));
 }
 
-//ReactDOM.render(<Root/>, document.getElementById("root"));
+

@@ -10,6 +10,11 @@ import {PhoneCollector} from "./PhoneCollector";
 import {Provider} from "mobx-react";
 
 export class Shell extends React.Component {
+	constructor(props){
+		super();
+		AppStore.plansType = props.plansType;
+		console.log(`Тип плана: ${AppStore.plansType}`)
+	}
 	render() {
 		return (
 			<Provider AppStore={AppStore}>
@@ -17,12 +22,11 @@ export class Shell extends React.Component {
 					<div className="row">
 						<div className="col-12">
 							<header>
-								Тип плана: {this.props.plansType}
-								<h2 className="h25, text-center">Информация о Вашей будущей квартире</h2>
-								<p className="h25, text-center">Почти все поля необязательны для заполнения, но
+
+								<h2 className="h-25 text-center">Информация о Вашей будущей квартире</h2>
+								<p className="h-25 text-center">Почти все поля необязательны для заполнения, но
 									благодаря этим данным мы создадим максимально подходящие для Вас планировки.</p>
 							</header>
-							[DEBUG] Запросов к серверу в очереди: {AppStore.requestsPending}
 							<NavBar/>
 							<Switch>
 								{routes.map(({path, component}, key) => {

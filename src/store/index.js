@@ -3,12 +3,14 @@ import defaultState from './defaultState';
 import {AppConfig} from "../config";
 
 
+
 class Store {
 	@observable requestsPending = 0;
 	@observable formData = {};
 	@observable customerName = '';
 	@observable customerEmai = '';
 	@observable results = [];
+	@observable plansType = null;
 
 	constructor(props) {
 		this.toDefaultState();
@@ -26,8 +28,7 @@ class Store {
 
 	@action
 	async getResults() {
-		console.clear();
-		console.log(AppConfig.apiAddress);
+
 		const rawResponse = await fetch(`${AppConfig.apiAddress}getPlan`, {
 			method: 'POST',
 			headers: {
@@ -38,8 +39,6 @@ class Store {
 
 		const content = await rawResponse.json();
 		if(AppConfig.debug){
-			console.clear();
-			console.log(content);
 			this.results = content.splice(0, 3);
 		}else{
 			this.results = content;
@@ -51,7 +50,9 @@ class Store {
 	}
 
 	toJS() {
-		return toJS(this.formData);
+		let data = toJS(this.formData);
+		data.plansType = this.plansType;
+		return data;
 	}
 
 }
