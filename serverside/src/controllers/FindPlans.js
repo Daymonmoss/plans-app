@@ -64,13 +64,13 @@ const scoreByOccupants = searchObject => plan => {
 }
 const byScore = (a, b) => b.score - a.score;
 
-
+const byType = type => element => element.planType===type;
 const findPlans = (req, res) => {
 	const searchObject = req.body;
+
 	let plans = db.getData('/plans');
-
-
 	let found = plans
+	.filter(byType(searchObject.plansType))
 	.map(scorable)
 	.map(scoreByOccupants(searchObject))
 	.filter(notNull)

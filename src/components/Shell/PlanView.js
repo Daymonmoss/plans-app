@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const ExplainedView = props => <div>
-	{Object.keys(props.elements).map((key, index) => (
-		<div><b>{key}</b>: {props.elements[key].join(', ')}</div>
-	))}
-</div>
+// const ExplainedView = props => <div>
+// 	{Object.keys(props.elements).map((key, index) => (
+// 		<div><b>{key}</b>: {props.elements[key].join(', ')}</div>
+// 	))}
+// </div>
 
 export class PlanView extends React.Component {
 	constructor(props) {

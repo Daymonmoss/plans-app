@@ -29,6 +29,10 @@ module.exports = {
 	// You may want 'eval' instead if you prefer to see the compiled output in DevTools.
 	// See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
 	devtool: 'cheap-module-source-map',
+
+	devServer: {
+		port:3000,
+	},
 	// These are the "entry points" to our application.
 	// This means they will be the "root" imports that are included in JS bundle.
 	// The first two entry points enable "hot" CSS and auto-refreshes for JS.
@@ -223,6 +227,7 @@ module.exports = {
 						exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/,/\.scss$/],
 						loader: require.resolve('file-loader'),
 						options: {
+							publicPath:process.env.REACT_APP_URL+'/',
 							name: 'static/media/[name].[hash:8].[ext]',
 						},
 					},

@@ -1,11 +1,10 @@
-const port = process.env.PORT || 80;
-const hostname = `${process.env.REACT_APP_HOST}.herokuapp.com` || 'localhost'
-const protocol = !!process.env.REACT_APP_HOST ? 'http' : 'http';
+const hostname = process.env.REACT_APP_URL;
+
 const AppConfig = {
 	spoolStore: true,
 	localStorageKey: 'APP_TEST',
 	debug:true,
-	apiAddress: `${protocol}://${hostname}:${port}/api/`
+	apiAddress: `${hostname}/api/`
 }
 
 export {AppConfig}

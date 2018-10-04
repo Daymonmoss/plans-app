@@ -1,10 +1,8 @@
 const express = require('express');
 const path = require('path');
+
 const cors = require('cors');
-
-
-
-
+require('dotenv').config(path.resolve(process.cwd(), '.env'))
 
 
 const app = express();
@@ -21,8 +19,10 @@ app.post('/api/getPlan', FindPlans);
 app.get('*', (req,res) =>{
 	res.sendFile(path.join(__dirname+'./../build/index.html'));
 });
-const port = process.env.PORT || 80
-app.listen(port || 80, function () {
+const port = process.env.PORT;
+app.listen(port, function () {
+
+
 	console.log('CORS-ready server is running on localhost:'+port+'!');
 });
 
