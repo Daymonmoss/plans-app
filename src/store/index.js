@@ -40,7 +40,7 @@ class Store {
 
 		const content = await rawResponse.json();
 		if(AppConfig.debug){
-			this.results = content.splice(0, 3);
+			this.results = content;
 			this.loading = false;
 		}else{
 			this.results = content;

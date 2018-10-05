@@ -77,7 +77,7 @@ const findPlans = (req, res) => {
 	.map(scoreByItems(searchObject))
 	.sort(byScore)
 	//todo:uncomment on production
-	const topPick = found;//.splice(0, 3);
+	const topPick = found.splice(0, 3);
 
 	res.status(200).send(JSON.stringify(topPick));
 }
