@@ -8,10 +8,10 @@ export class Result extends React.Component {
 	render() {
 		return (
 			<div className="row">
-			<div class="col-12">
+			<div className="col-12">
 				<SuggestedPlans/>
 				</div>
-				<div class="col-12">
+				<div className="col-12">
 				
 				<FinalSubmission/>
 				</div>

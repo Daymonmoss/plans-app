@@ -19,7 +19,7 @@ export class SuggestedPlans extends React.Component {
 						 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{'width': '75%'}}></div>
 				</div>}
 				{!this.props.AppStore.loading && this.props.AppStore.results.map((result, key) => (
-				<div className="col"><PlanView data={result} key={key}/></div>
+				<div className="col" key={key}><PlanView data={result}/></div>
 				))}
 			</div>
 			
