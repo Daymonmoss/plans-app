@@ -14,13 +14,19 @@ export class SuggestedPlans extends React.Component {
 		return (
 			
 			<div className={"row no-gutters"}>
-				{this.props.AppStore.loading && <div className="progress">
-					<div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-						 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{'width': '75%'}}></div>
-				</div>}
-				{!this.props.AppStore.loading && this.props.AppStore.results.map((result, key) => (
+
+				{this.props.AppStore.loading && (
+					<div className={"col-12"}><div className="progress">
+
+					<div
+						className="progress-bar progress-bar-striped progress-bar-animated"
+						role="progressbar"
+						style={{'width': '100%'}}>&nbsp;</div>
+				</div></div>)}
+				{!this.props.AppStore.loading && !!this.props.AppStore.results.length && this.props.AppStore.results.map((result, key) => (
 				<div className="col" key={key}><PlanView data={result}/></div>
 				))}
+				{!this.props.AppStore.loading && !this.props.AppStore.results.length && <div>Ничего не найдено, что вы там выбрали? 0_0</div>}
 			</div>
 			
 		)

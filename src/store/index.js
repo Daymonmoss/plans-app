@@ -41,7 +41,6 @@ class Store {
 		const content = await rawResponse.json();
 		if(AppConfig.debug){
 			this.results = content.topPick;
-			console.log(content.info);
 			this.loading = false;
 		}else{
 			this.results = content;
