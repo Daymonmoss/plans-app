@@ -290,7 +290,7 @@ module.exports = {
 		// in `package.json`, in which case it will be the pathname of that URL.
 		new InterpolateHtmlPlugin(env.raw),
 		// Analyzes the bundle
-		new BundleAnalyzerPlugin({generateStatsFile:true}),
+		//new BundleAnalyzerPlugin({generateStatsFile:true}),
 		// Generates an `index.html` file with the <script> injected.
 		new HtmlWebpackPlugin({
 			inject: true,
