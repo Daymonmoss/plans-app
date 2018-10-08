@@ -9,8 +9,9 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static('./img/', path.join(__dirname, './data/upload')));
 
-app.options('*', cors())
+app.options('*', cors());
 
 
 const FindPlans = require('./src/controllers/FindPlans');

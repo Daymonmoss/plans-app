@@ -4,6 +4,8 @@ import defaultState from './defaultState';
 
 class Store {
 	@observable formData;
+	@observable plans = [];
+	@observable currentPlan = {};
 	@observable image = null;
 	@observable name = 'Новый план помещения';
 
@@ -22,9 +24,7 @@ class Store {
 			...this.formData
 		};
 
-		delete obj.customerName;
-		delete obj.customerEmail;
-		return obj;
+
 	}
 }
 
