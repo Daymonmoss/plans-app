@@ -26,7 +26,7 @@ app.get('*', (req,res) =>{
 const port = process.env.PORT;
 
 app.listen(port, function () {
-	console.log('CORS-ready server is running on localhost:'+port+'!');
+	console.log(`CORS-ready server is running on localhost:${port}! Image files exposed at /img/`);
 });
 
 
