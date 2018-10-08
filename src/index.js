@@ -10,7 +10,7 @@ const Root = (props) => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path={'/editor'} component={Editor}/>
+				{/*<Route path={'/editor'} component={Editor}/>*/}
 				<Route path={'/'} render={()=><Shell plansType={props.plansType}/>} />
 			</Switch>
 		</BrowserRouter>
