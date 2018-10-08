@@ -66,15 +66,15 @@ const byScore = (a, b) => b.score - a.score;
 
 const byType = type => element => element.planType===type;
 const findPlans = (req, res) => {
-	const searchObject = req.body;
+	const input = req.body;
 
 	let plans = db.getData('/plans');
 	let found = plans
-	.filter(byType(searchObject.plansType))
+	.filter(byType(input.plansType))
 	.map(scorable)
-	.map(scoreByOccupants(searchObject))
+	.map(scoreByOccupants(input.occupants))
 	.filter(notNull)
-	.map(scoreByItems(searchObject))
+	.map(scoreByItems(input))
 	.sort(byScore)
 	//todo:uncomment on production
 	const info = found.map( found => ({...found, planImage:'OMITTED'}))

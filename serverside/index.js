@@ -9,6 +9,7 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, '../static')));
 app.options('*', cors())
 
 
@@ -19,10 +20,11 @@ app.post('/api/getPlan', FindPlans);
 app.get('*', (req,res) =>{
 	res.sendFile(path.join(__dirname+'./../build/index.html'));
 });
+
+
 const port = process.env.PORT;
+
 app.listen(port, function () {
-
-
 	console.log('CORS-ready server is running on localhost:'+port+'!');
 });
 
