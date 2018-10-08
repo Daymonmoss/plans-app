@@ -19,8 +19,6 @@ const scoreByItems = searchObject => plan => {
 		let planObjectItems = plan[key];
 		let {matched, notMatched} = matchPlanItems(searchObjectItems, planObjectItems)
 		result.score += matched.length * power - notMatched.length * power;
-		// result.matched[key] = matched;
-		// result.notMatched[key] = notMatched;
 		return result;
 	}, {score:0, matched: [], notMatched: []});
 
@@ -69,19 +67,17 @@ const findPlans = (req, res) => {
 	const input = req.body;
 
 	let plans = db.getData('/plans');
+
 	let found = plans
 	.filter(byType(input.plansType))
 	.map(scorable)
-	.map(scoreByOccupants(input.occupants))
+	.map(scoreByOccupants(input))
 	.filter(notNull)
 	.map(scoreByItems(input))
 	.sort(byScore)
-	//todo:uncomment on production
+
 	const info = found.map( found => ({...found, planImage:'OMITTED'}))
 	const topPick = found.slice(0, 3);
-
-
-
 
 	res.status(200).send(JSON.stringify({topPick,info}));
 }
